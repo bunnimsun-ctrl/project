@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organic Store - Checkout</title>
+    <link rel="stylesheet" href="../css/service.css">
+</head>
+<body>
+ <nav id="menu">
+        <ul class="nav-links">
+            <li><a href="fruitable.html">Home</a></li>
+            <li><a href="Fruit.html">Fruit</a></li>
+            <li><a href="vegetable.html">Vegetable</a></li>
+            <li class="active"><a href="service.html">Sign Up for buy</a></li>
+        </ul>
+        <div class="header-icons">
+            <i class="fa fa-search"></i>
+            <i class="fa fa-shopping-basket"></i>
+        </div>
+    </nav>
+
+<div class="checkout-container">
+    <h1 class="main-title"></h1>
+
+    <form onsubmit="event.preventDefault();">
+        
+        <!-- Step 1: Profile Details -->
+        <div class="form-step-title">
+            <span class="step-number">1</span> Your basic information
+        </div>
+        <div class="form-row-2">
+            <input type="text" class="form-input" placeholder="First Name" required>
+            <input type="text" class="form-input" placeholder="Last Name" required>
+        </div>
+        <div class="form-group">
+            <input type="email" class="form-input" placeholder="Email Address" required>
+        </div>
+
+        <!-- Step 2: Location and Logistics Profile -->
+        <div class="form-step-title">
+            <span class="step-number">2</span> Billing address
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-input" placeholder="Street" required>
+        </div>
+        <div class="form-row-2">
+            <input type="text" class="form-input" placeholder="City" required>
+            <select class="form-input form-select" required>
+                <option value="" disabled selected>Country</option>
+                <option value="KH">Cambodia</option>
+                <option value="US">United States</option>
+            </select>
+        </div>
+
+        <!-- Step 3: Integrated QR Payment Node -->
+        <div class="form-step-title">
+            <span class="step-number">3</span> Payment method
+        </div>
+        
+        <div class="payment-qr-selector">
+            <span>ABA PAY / KHQR</span>
+        </div>
+
+        <div class="qr-display-area">
+            <!-- Render the actual merchant scan graphic directly from host -->
+            <img src="../img/nimqr.png" 
+                 alt="ABA Pay QR Code - Sun Bunnim" 
+                 class="qr-image-display">
+            <p class="qr-instructions">Scan with ABA Mobile or any KHQR Bank App</p>
+            <p class="qr-account-name">Account Name: SUN BUNNIM</p>
+        </div>
+
+        <div class="checkout-footer-legal">
+            By completing this purchase, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+        </div>
+    </form>
+</div>
+<!-- START FOOTER SECTION -->
+<footer class="fruitable-footer">
+
+    <!-- Top Organic Wave Vector Layer -->
+    <div class="footer-wave-container">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V0H1200V94.37C1129,113.91,1055.22,111.08,985.66,92.83Z" fill="#ffffff"></path>
+        </svg>
+    </div>
+
+    <!-- Main Footer Content Links Grid -->
+    <div class="footer-grid">
+        
+        <!-- Category Column 1: Shop Menu -->
+        <div class="footer-col">
+            <h4 class="footer-heading">Shop Fruitable</h4>
+            <ul class="footer-links-list">
+                <li><a href="#">Starter Packs</a></li>
+                <li><a href="#">Fresh Vegetables</a></li>
+                <li><a href="#">Organic Fruits</a></li>
+                <li><a href="#">Eco-Friendly Tools</a></li>
+                <li><a href="#">Shop All Produce</a></li>
+            </ul>
+        </div>
+
+        <!-- Category Column 2: Educational Content -->
+        <div class="footer-col">
+            <h4 class="footer-heading">Learn</h4>
+            <ul class="footer-links-list">
+                <li><a href="#">Our Farmers Story</a></li>
+                <li><a href="#">Healthy Recipes</a></li>
+                <li><a href="#">Nutritional Content</a></li>
+                <li><a href="#">Health Benefits</a></li>
+                <li><a href="#">FAQ's</a></li>
+            </ul>
+        </div>
+
+        <!-- Category Column 3: Company Services -->
+        <div class="footer-col">
+            <h4 class="footer-heading">More from Organic</h4>
+            <ul class="footer-links-list">
+                <li><a href="#">Sign In</a></li>
+                <li><a href="#">Wholesale Partnerships</a></li>
+                <li><a href="#">Affiliate Program</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Social Media Sharing Block -->
+        <div class="footer-social-col">
+            <h4 class="footer-heading" style="font-size: 18px;">Follow us</h4>
+            <div class="footer-social-row">
+                <a href="#" class="social-btn"><i class="fa-brands fa-pinterest-p"></i></a>
+                <a href="#" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="social-btn"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Legal Compliance & Copyright Row -->
+    <div class="footer-bottom-bar">
+        <div>
+            &copy; 2026 fruitable.com
+        </div>
+        <div class="footer-legal-links">
+            <a href="#">Terms of Service</a> | 
+            <a href="#">Privacy Policy</a> | 
+            <a href="#">Refund Policy</a> | 
+            <a href="#">Accessibility Policy</a>
+        </div>
+    </div>
+
+</footer>
+<!-- END FOOTER SECTION -->
+
+
+</body>
+</html>
