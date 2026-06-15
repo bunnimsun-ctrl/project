@@ -1,0 +1,171 @@
+/* General Setup */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fafafa;
+    color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container Split Layout */
+.infographic-container {
+    display: flex;
+    background: #ffffff;
+    max-width: 1000px;
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    padding: 40px;
+    gap: 40px;
+}
+
+/* Left Section styling */
+.info-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-title {
+    font-size: 4.5rem;
+    font-weight: 300;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+}
+
+.highlight-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+
+.yellow-badge {
+    background-color: #ffd54f;
+    color: #332200;
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+.description {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 30px;
+    max-width: 350px;
+}
+
+.serving-size {
+    font-style: italic;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.back-btn {
+    align-self: flex-start;
+    color: #222;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid #222;
+    padding-bottom: 2px;
+    transition: color 0.2s;
+}
+
+.back-btn:hover {
+    color: #ffd54f;
+    border-color: #ffd54f;
+}
+
+/* Right Visual Section with Floating Elements */
+.visual-column {
+    flex: 1.2;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 450px;
+}
+
+.bg-apple-img {
+    max-width: 90%;
+    height: auto;
+    object-fit: contain;
+    opacity: 0.95;
+}
+
+/* Floating Metrics Styling */
+.metric-circle {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px dashed #bbb;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    backdrop-filter: blur(4px);
+}
+
+.metric-circle .value {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #111;
+}
+
+.metric-circle .label {
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #666;
+    letter-spacing: 0.5px;
+}
+
+/* Precise Positions based on the image layout */
+.metric-circle.fat {
+    width: 95px; height: 95px;
+    top: 10%; right: 15%;
+}
+
+.metric-circle.fiber {
+    width: 105px; height: 105px;
+    top: 40%; left: 5%;
+}
+
+.metric-circle.calories {
+    width: 115px; height: 115px;
+    top: 42%; right: 25%;
+}
+
+.metric-circle.carbs {
+    width: 105px; height: 105px;
+    bottom: 25%; right: 0%;
+}
+
+.metric-circle.protein {
+    width: 100px; height: 100px;
+    bottom: 5%; left: 20%;
+}
+
+/* Responsive Handling */
+@media (max-width: 768px) {
+    .infographic-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .visual-column {
+        min-height: 400px;
+    }
+}

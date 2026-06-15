@@ -1,0 +1,677 @@
+        :root {
+            --primary-accent: #2bbbb6;
+            --step-blue: #3b82f6;
+            --success-green: #10b981;
+            --border-color: #cccccc;
+            --text-dark: #333333;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #f6f6f6;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-dark);
+        }
+
+        .checkout-container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 30px;
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.05);
+            box-sizing: border-box;
+        }
+
+        h1.main-title {
+            font-size: 24px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        /* Plan Picker Group */
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .radio-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .radio-label input[type="radio"], .radio-label input[type="checkbox"] {
+            accent-color: var(--primary-accent);
+            width: 18px;
+            height: 18px;
+            margin: 0;
+        }
+
+        /* Form Sequential Number Steps */
+        .form-step-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #222222;
+            margin-top: 25px;
+            margin-bottom: 20px;
+        }
+
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            border: 2px solid var(--step-blue);
+            border-radius: 50%;
+            color: var(--step-blue);
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        /* Grid Input Systems */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-row-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        /* Form Elements UI */
+        .form-input, .form-select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+            background-color: #ffffff;
+            color: var(--text-dark);
+            transition: border-color 0.2s ease;
+        }
+
+        .form-input:focus, .form-select:focus {
+            outline: none;
+            border-color: #666666;
+        }
+
+        .form-input::placeholder {
+            color: #999999;
+        }
+
+        /* Clean Customized Select Arrow styling */
+        .form-select {
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://w3.org' viewBox='0 0 24 24' fill='none' stroke='%23bbbbbb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            background-size: 14px;
+            padding-right: 40px;
+        }
+
+        /* QR Selector Box Layout */
+        .payment-qr-selector {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border: 2px solid #047857; /* Active Green highlight stroke */
+            border-radius: 6px;
+            padding: 10px 20px;
+            background: #ffffff;
+            position: relative;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .payment-qr-selector::after {
+            content: '✓';
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: var(--success-green);
+            color: white;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            font-size: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        /* Scan QR Graphics Container */
+        .qr-display-area {
+            background-color: #fcfcfc;
+            border: 1px dashed var(--border-color);
+            border-radius: 6px;
+            padding: 25px 20px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .qr-image-display {
+            width: 100%;
+            max-width: 220px;
+            height: auto;
+            margin: 0 auto 15px auto;
+            display: block;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .qr-instructions {
+            font-size: 14px;
+            color: #0b5394;
+            margin: 0 0 4px 0;
+            font-weight: 600;
+        }
+
+        .qr-account-name {
+            font-size: 12px;
+            color: #666666;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Footer Conditions Legal links */
+        .checkout-footer-legal {
+            font-size: 12px;
+            color: #666666;
+            line-height: 1.6;
+            margin-top: 30px;
+            border-top: 1px solid #eeeeee;
+            padding-top: 15px;
+        }
+
+        .checkout-footer-legal a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+
+        .checkout-footer-legal a:hover {
+            text-decoration: underline;
+        }
+         body {
+            margin: 0;
+            padding: 0;
+            background-color: #f6f6f6;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+
+        #layout {
+            width: 1200px;
+            margin: 0px auto;
+            background-color: #ffffff;
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.05);
+            box-sizing: border-box;
+        }
+
+        /* Top Bar utility line */
+        .top-bar {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 40px;
+            font-size: 13px;
+            color: #666;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .top-bar-left span {
+            margin-right: 25px;
+        }
+
+        /* Main Branding Header Row */
+        .header-main-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 40px;
+            background-color: #fff;
+        }
+        .logo {
+            font-size: 32px;
+            font-weight: 800;
+            color: #222;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        .logo span {
+            color: #79a206;
+        }
+        .logo-orange {
+            color: #ff8a00;
+            margin-right: 8px;
+            font-size: 28px;
+        }
+        .header-contact {
+            font-size: 14px;
+            color: #444;
+        }
+        .header-contact strong {
+            color: #79a206;
+        }
+
+        /* Green Main Navigation Menu */
+        #menu {
+            background-color: #79a206;
+            padding: 0 40px;
+            height: 55px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-links li a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 18px 20px;
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: background 0.3s;
+        }
+        .nav-links li a:hover, .nav-links li.active a {
+            background-color: #688b04;
+        }
+        .header-icons {
+            color: white;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .header-icons i {
+            cursor: pointer;
+        }
+
+        /* Hero Banner Section (Corrected Alignment & Fitting) */
+        .hero-banner {
+            background-color: #f7f5f0;
+            height: 420px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px 0 80px;
+            overflow: hidden;
+            position: relative;
+            background: url('../img/Mixed\ fruit.jpg');
+        }
+        .hero-text {
+            max-width: 500px;
+            z-index: 2;
+            
+        }
+        /* .hero-text span {
+            color: #ffffff;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 14px;
+        } */
+        .hero-text h1 {
+            font-size: 52px;
+            margin: 10px 0 20px 0;
+            color: #222;
+            font-weight: 800;
+            line-height: 1.1;
+        }
+        .hero-text .btn-explore {
+            background-color: #79a206;
+            color: white;
+            text-decoration: none;
+            padding: 13px 30px;
+            border-radius: 25px;
+            font-weight: 600;
+            display: inline-block;
+            transition: background 0.3s;
+            font-size: 14px;
+        }
+        .hero-text .btn-explore:hover {
+            background-color: #688b04;
+        }
+        .hero-image-container {
+            width: 150%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        /* .hero-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+            mix-blend-mode: multiply; 
+            object-position: top;
+            right: auto;
+            bottom: auto;
+            object-fit: cover;
+        } */
+
+        /* Store Trust Badges */
+        .trust-badges {
+            display: flex;
+            justify-content: space-between;
+            padding: 30px 40px;
+            background-color: #fff;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .badge-box {
+            display: flex;
+            align-items: center;
+            width: 23%;
+        }
+        .badge-box i {
+            font-size: 30px;
+            color: #79a206;
+            margin-right: 15px;
+        }
+        .badge-info h4 {
+            margin: 0;
+            font-size: 14px;
+            color: #222;
+        }
+        .badge-info p {
+            margin: 5px 0 0 0;
+            font-size: 12px;
+            color: #888;
+        }
+
+        /* Marketing Category Banners Grid */
+        .category-banners {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 40px;
+            background-color: #fff;
+        }
+        .promo-card {
+            height: 200px;
+            border-radius: 4px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            padding: 30px;
+            box-sizing: border-box;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .promo-1 { background-image: url('../img/vegetable.jpg'); }
+        .promo-2 { background-image: url('../img/fruit2.jpg'); }
+        .promo-3 { background-image: url('../img/fruitable.jpg'); }
+        
+        .promo-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(255, 255, 255, 0.15);
+            z-index: 1;
+        }
+        .promo-content {
+            position: relative;
+            z-index: 2;
+            max-width: 180px;
+        }
+        .promo-content h3 {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            color: #ffffff;
+            line-height: 1.3;
+        }
+        .promo-content a {
+            color: #79a206;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        /* Products Grid Header Section */
+        .section-title-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 40px 0 40px;
+            background-color: #fff;
+            border-bottom: 2px solid #f0f0f0;
+            margin-bottom: 25px;
+        }
+        .section-title-container h2 {
+            font-size: 24px;
+            color: #222;
+            margin: 0;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #79a206;
+            position: relative;
+            bottom: -2px;
+            font-weight: 700;
+        }
+        .tab-menu {
+            display: flex;
+            gap: 25px;
+            font-size: 14px;
+            color: #777;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .tab-menu span.active {
+            color: #79a206;
+            border-bottom: 2px solid #79a206;
+            padding-bottom: 15px;
+            position: relative;
+            bottom: -2px;
+        }
+
+        /* Products Grid Content Section */
+        #product_grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            padding: 0 40px 40px 40px;
+            background-color: #fff;
+        }
+        .product-card {
+            border: 1px solid #eef2f4;
+            border-radius: 4px;
+            padding: 20px 15px;
+            text-align: center;
+            position: relative;
+            background-color: #fff;
+            transition: all 0.3s;
+        }
+        .product-card:hover {
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+            border-color: #dce5e9;
+        }
+        .discount-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background-color: #79a206;
+            color: white;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 3px;
+            z-index: 2;
+        }
+        .product-img-wrapper {
+            height: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        .product-img-wrapper img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        .product-title {
+            font-size: 14px;
+            color: #444;
+            margin: 0 0 8px 0;
+            font-weight: 600;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .stars {
+            color: #ffaa00;
+            font-size: 11px;
+            margin-bottom: 8px;
+        }
+        .price-box {
+            font-size: 15px;
+            font-weight: 700;
+            color: #222;
+        }
+        .price-box .old-price {
+            font-size: 13px;
+            color: #aaa;
+            text-decoration: line-through;
+            font-weight: 400;
+            margin-left: 5px;
+        }
+        /* --- Custom Fruitable Wavy Footer Styles --- */
+.fruitable-footer {
+    background-color: #bbf2be; 
+    font-family: sans-serif; 
+    padding: 100px 40px 30px 40px; 
+    margin-top: 50px; 
+    position: relative; 
+    overflow: hidden;
+}
+
+/* Wavy Top SVG Divider Wrapper */
+.footer-wave-container {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    overflow: hidden; 
+    line-height: 0;
+}
+.footer-wave-container svg {
+    position: relative; 
+    display: block; 
+    width: calc(100% + 1.3px); 
+    height: 60px;
+}
+
+/* Main Grid Layout */
+.footer-grid {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    gap: 30px;
+}
+.footer-col {
+    flex: 1; 
+    min-width: 180px;
+}
+.footer-social-col {
+    flex: 1; 
+    min-width: 220px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start;
+}
+
+/* Typography & Links */
+.footer-heading {
+    color: #0d2c11; 
+    font-weight: bold; 
+    margin-bottom: 20px; 
+    font-size: 16px;
+}
+.footer-links-list {
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    line-height: 2.2; 
+    font-size: 14px;
+}
+.footer-links-list a {
+    color: #0d2c11; 
+    text-decoration: none; 
+    opacity: 0.85;
+    transition: opacity 0.2s ease;
+}
+.footer-links-list a:hover {
+    opacity: 1;
+}
+
+/* Social Media Circular Buttons */
+.footer-social-row {
+    display: flex; 
+    gap: 12px;
+}
+.social-btn {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    width: 36px; 
+    height: 36px; 
+    background-color: #0d2c11; 
+    color: #bbf2be; 
+    border-radius: 50%; 
+    text-decoration: none; 
+    font-size: 16px;
+    transition: transform 0.2s ease;
+}
+.social-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Bottom Legal Copyright Bar */
+.footer-bottom-bar {
+    max-width: 1200px; 
+    margin: 50px auto 0 auto; 
+    padding-top: 20px; 
+    border-top: 1px solid rgba(13, 44, 17, 0.15); 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    font-size: 12px; 
+    color: #0d2c11; 
+    opacity: 0.8;
+}
+.footer-legal-links {
+    display: flex; 
+    gap: 15px;
+}
+.footer-legal-links a {
+    color: #0d2c11; 
+    text-decoration: none;
+}
